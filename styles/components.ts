@@ -15,13 +15,13 @@ export namespace Components {
   /**
    * Primary button
    */
-  export const PrimaryButton = styled.Pressable`
+  export const PrimaryButton = styled.TouchableOpacity`
     padding: 16px;
     background-color: ${Colors.SECONDARY};
     border-radius: 100px;
     align-items: center;
   `;
-  export const SecondaryButton = styled.Pressable`
+  export const SecondaryButton = styled.TouchableOpacity`
     padding: 16px;
     background-color: white;
     border-radius: 100px;
