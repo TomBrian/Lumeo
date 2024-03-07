@@ -20,23 +20,18 @@ export namespace Typography {
   `;
 
   export const H4 = styled.Text`
-    font-size: 27.65px;
-    font-family: "Poppins-Bold";
-  `;
-
-  export const H5 = styled.Text`
     font-size: 23.04px;
     font-family: "Poppins-Bold";
   `;
 
-  export const H6 = styled.Text`
+  export const H5 = styled.Text`
     font-size: 19.2px;
     font-family: "Poppins-Bold";
   `;
 
   export const P = styled.Text`
     font-size: 16px;
-    font-family: "Poppins-Regular";
+    font-family: "Poppins-Medium";
   `;
 
   export const A = styled.Text`

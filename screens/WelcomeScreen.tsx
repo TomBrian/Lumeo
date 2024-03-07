@@ -3,11 +3,14 @@
 import { SvgElements } from "../components/SvgElements";
 import { Colors } from "../styles/colors";
 import { Components } from "../styles/components";
-import { StatusBar, Text, View } from "react-native";
+import { SafeAreaView, StatusBar, Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 import { Typography } from "../styles/typography";
+import { Animations } from "../animations/FadeInUp";
 
 export default function WelcomeScreen() {
+  const navigation = useNavigation();
   return (
     <Components.Container
       style={{
@@ -37,15 +40,22 @@ export default function WelcomeScreen() {
         }}
       >
         <View style={{ width: 310 }}>
-          <Typography.P>
-            <Text style={{ fontWeight: "bold" }}>Swift Approval</Text> - Get
-            your mortgage application processed and approved in record time.{" "}
-          </Typography.P>
-          <Typography.P style={{ marginTop: 24 }}>
-            <Text style={{ fontWeight: "bold" }}>Secure Vault Mortgage</Text> -
-            Utmost security and privacy in every transaction.
-          </Typography.P>
-          <Components.PrimaryButton style={{ marginTop: 32 }}>
+          <Animations.FadeInUp>
+            <Typography.P>
+              <Text style={{ fontWeight: "bold" }}>Swift Approval</Text> - Get
+              your mortgage application processed and approved in record time.{" "}
+            </Typography.P>
+            <Typography.P style={{ marginTop: 24 }}>
+              <Text style={{ fontWeight: "bold" }}>Secure Vault Mortgage</Text>{" "}
+              - Utmost security and privacy in every transaction.
+            </Typography.P>
+          </Animations.FadeInUp>
+          <Components.PrimaryButton
+            style={{ marginTop: 32 }}
+            onPress={() => {
+              navigation.navigate("GetStarted");
+            }}
+          >
             <Typography.P style={{ color: "white" }}>Get Started</Typography.P>
           </Components.PrimaryButton>
           <Components.SecondaryButton style={{ marginTop: 16 }}>
